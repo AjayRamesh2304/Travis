@@ -26,6 +26,7 @@ def iccstats(request):
     for i in d:
         rank.append(i["rank"])
         name.append(i["name"])
+    print("Added CI YAML")
     return render(request, 'icc.html', {'name': name, 'rank': rank})
       
      
