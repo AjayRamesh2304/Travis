@@ -8,7 +8,7 @@ def home(request):
 def iccstats(request):
     url = "https://cricbuzz-cricket.p.rapidapi.com/stats/v1/rankings/batsmen"
 
-    querystring = {"formatType":"test"}
+    querystring = {"formatType":"t20"}
 
     headers = {
     "X-RapidAPI-Key": "ddf0d0319cmsh58ccbfa13a818e9p157a52jsn9ef1654fef2a",

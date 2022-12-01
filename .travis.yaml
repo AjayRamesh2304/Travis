@@ -1,6 +1,22 @@
 language: python
 python:
   - "2.7"
-  - "3.5"
-virtualenv:
-  system_site_packages: true
+  - "3.2"
+  - "3.3"
+  - "3.4"
+
+install:
+  - pip install -r requirements.txt
+ 
+# get email when travis builds
+notifications:
+  email:
+    recipients:
+      - ajayofficial2304@gmail.com
+    on_success: always
+    on_failure: always
+ 
+script:
+  - python manage.py runserver # doesn't work, travis hangs for ten minutes and errors build.
+ 
+
