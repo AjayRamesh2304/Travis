@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path
-from . import views
+from projecttravis.views import RequestStandings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('iccstats',views.iccstats)
+    path('', RequestStandings.as_view()),
+    path('iccstats', RequestStandings.as_view())
 ]
